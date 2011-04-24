@@ -1,2 +1,3 @@
 *.swp
 *.un~
+config/s3.php
