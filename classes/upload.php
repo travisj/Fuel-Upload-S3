@@ -20,8 +20,12 @@ class Upload extends \Fuel\Core\Upload {
 	 * @param	string	path to move to
 	 * @return	void
 	 */
-	public static function save($file, $save_as)
+	public static function save()
 	{
+		$args = func_get_args();
+		$file = $args[0];
+		$save_as = $args[1];
+
 		// get access keys
 		$access_key_id = static::$config['access_key_id'];
 		$secret_access_key = static::$config['secret_access_key'];
